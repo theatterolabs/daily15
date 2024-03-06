@@ -5385,6 +5385,7 @@ const userStore = defineStore("user", {
           this.userDetailRespone.dailyReward.rewarded = true;
           this.showConfetti();
           this.isRewardCollected = true;
+          gtag("event", "Collected_Daily_Reward");
           try {
             if (this.isIOS === "0")
               JSBridge.showMessageInNative("rewardCollected:true");
@@ -5394,6 +5395,7 @@ const userStore = defineStore("user", {
             console.log(innerError);
           }
           this.showSpinner = false;
+          
         }
         useAlertStore.info(result.message);
       } catch (error) {
@@ -5420,6 +5422,7 @@ const userStore = defineStore("user", {
           this.userDetailRespone.dailyStreak.rewarded = true;
           this.showConfetti();
           this.isRewardCollected = true;
+          gtag("event", "Collected_Daily_Streak_Reward");
           try {
             if (this.isIOS === "0")
               JSBridge.showMessageInNative("rewardCollected:true");
@@ -5953,6 +5956,9 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     function redirectToGameUrl(isChallengeCompleted, url, challengeId, currentLevel, reward, timer, landScape) {
       if (!isChallengeCompleted) {
         clickPlay();
+        gtag("event", "Clicked_Challenge", {
+          "challenge_name": name
+        });
         var elementTile = document.getElementById(challengeId);
         if (elementTile) {
           elementTile.classList.add("game-card-minus-shadow");
@@ -6220,6 +6226,7 @@ const _sfc_main = {
     }
     async function dailyStarClick() {
       clickPlay();
+      gtag("event", "Viewed_LeaderBoard");
       await getUserRank();
       await getTopThree();
       await getLeaders(1, data.userRank.rank + 100);
@@ -6237,6 +6244,7 @@ const _sfc_main = {
     onBeforeMount(async () => {
       await getUser();
       console.log("version : v15");
+      gtag("event", "Viewed_Daily_Games");
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("main", _hoisted_1, [
