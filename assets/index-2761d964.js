@@ -5195,7 +5195,7 @@ function storeToRefs(store) {
     return refs;
   }
 }
-const _imports_0$1 = "/assets/backBtn@3x-eb1da810.png";
+const _imports_0$1 = "/daily15/assets/backBtn@3x-eb1da810.png";
 const alertStore = defineStore("alert", {
   state: () => ({
     alert: {},
@@ -5620,12 +5620,12 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _imports_0 = "/assets/lock-9d8c5f10.png";
-const _imports_1 = "/assets/tick-d7c94c2c.png";
-const _imports_2 = "/assets/popup_bg-8c64e0c5.png";
-const _imports_3 = "/assets/streak_reward-22e52b4c.png";
-const _imports_4 = "/assets/coin-star-9f295a77.png";
-const _imports_5 = "/assets/daily_reward-146c3f2d.png";
+const _imports_0 = "/daily15/assets/lock-9d8c5f10.png";
+const _imports_1 = "/daily15/assets/tick-d7c94c2c.png";
+const _imports_2 = "/daily15/assets/popup_bg-8c64e0c5.png";
+const _imports_3 = "/daily15/assets/streak_reward-22e52b4c.png";
+const _imports_4 = "/daily15/assets/coin-star-9f295a77.png";
+const _imports_5 = "/daily15/assets/daily_reward-146c3f2d.png";
 const _hoisted_1$4 = { class: "progress streaks twentytwo" };
 const _hoisted_2$4 = { class: "card-carousel" };
 const _hoisted_3$3 = { class: "card reward" };
@@ -6042,7 +6042,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const userAvatar = "/assets/user-c456891b.png";
+const userAvatar = "/daily15/assets/user-c456891b.png";
 const _hoisted_1$2 = { class: "tab-wrapper-leaderboard" };
 const _hoisted_2$2 = /* @__PURE__ */ createBaseVNode("input", {
   type: "radio",
